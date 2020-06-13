@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
  
 namespace POCO
 {
@@ -9,6 +8,7 @@ namespace POCO
         public int ToUserId { get; set; }
         public int FromUserId { get; set; }
         public int MessageId { get; set; }
+        public string MessageSubject { set; get; }
         ////[Display(Name = "Message Content")]
         public string MessageBody { get; set; }
 

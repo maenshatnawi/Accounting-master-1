@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace POCO
 {
-    public class Message
+    public class Messages
     {
         public int MessageId { set; get; }
         ////[Display(Name = "Message")]
