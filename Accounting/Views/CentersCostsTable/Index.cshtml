@@ -1,0 +1,71 @@
+﻿@model List<POCO.CentersCostsTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>AccountTable</h2>
+
+
+
+
+@helper GetTreeView(List<POCO.CentersCostsTable> CentersCostsTree, Int64 parentID)
+{
+    foreach (var i in CentersCostsTree.Where(a => a.ParentId.Equals(parentID)))
+    {
+        <li>
+            @{var TreeBranche = CentersCostsTree.Where(a => a.ParentId.Equals(i.CentersCostsNo)).Count();}
+            @if (TreeBranche > 0)
+            {
+                <span class="collapseTree  collapsible">&nbsp;</span>
+            }
+            else
+            {
+                <span style="width:15px; display:inline-block">&nbsp;</span>
+            }
+            <span>
+                (@i.CentersCostsNo)&nbsp;@i.CentersCostsName&nbsp; &nbsp; &nbsp; &nbsp;
+
+                <span>
+                    @Html.ActionLink("Create", "Create", new { ParCentersCostsNo = i.CentersCostsNo }) |
+                    @Html.ActionLink("Edit", "Edit", new { ParCentersCostsNo = i.CentersCostsNo }) |
+                    @Html.ActionLink("Details", "Details", new { ParCentersCostsNo = i.CentersCostsNo }) |
+
+                    @Html.ActionLink("Delete", "Delete", new { ParCentersCostsNo = i.CentersCostsNo }) |
+                </span>
+
+
+
+
+            </span>
+            @if (TreeBranche > 0)
+            {
+                <ul>
+                    @GetTreeView(CentersCostsTree, i.CentersCostsNo)
+                    @* Recursive  Call for Populate Sub items here*@
+                </ul>
+            }
+        </li>
+    }
+}
+<div style="border:solid 1px black; padding:10px; background-color:#FAFAFA;">
+    <div class="treeview">
+        @if (Model.Count() <= 0)
+        {
+            @Html.ActionLink("Create", "CreateParent")
+        }
+        @if (Model != null && Model.Count() > 0)
+        {
+            <ul>
+                @GetTreeView(Model, Model.FirstOrDefault().ParentId)
+            </ul>
+        }
+
+
+    </div>
+</div>
+
+
+
+
+

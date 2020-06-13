@@ -1,0 +1,40 @@
+﻿@model IEnumerable<POCO.MessageUsers>
+
+
+    <div class="col-lg-4">
+        <div class="ibox ">
+            <div class="ibox-title">
+                <h5>Messages</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content ibox-heading">
+                <h3><i class="fa fa-envelope-o"></i> New messages</h3>
+                <small><i class="fa fa-tim"></i> You have 22 new messages and 16 waiting in draft folder.</small>
+            </div>
+            <div class="ibox-content">
+                <div class="feed-activity-list">
+                    @foreach (var item in Model)
+                    {
+                        <div class="feed-element">
+                            <div>
+                                <strong> @Html.DisplayFor(modelItem => item.FirstName)  @Html.DisplayFor(modelItem => item.LastName)</strong>
+                                <div>
+                                    @Html.DisplayFor(modelItem => item.MessageBody)
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>

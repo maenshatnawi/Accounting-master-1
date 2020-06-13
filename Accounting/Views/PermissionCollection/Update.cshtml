@@ -1,0 +1,72 @@
+﻿@model POCO.PermissionCollection
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC6_Seed_Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+    <script>
+
+    </script>
+
+
+</head>
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">ACS System</h1>
+
+            </div>
+            <p>Update Collection</p>
+            <form class="m-t" role="form" action="Update" method="post">
+                <div class="row">
+                    <div class="col-lg-4">
+                        @Html.Label("Collection ID")
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            @Html.TextBoxFor(a => a.CollectionID, htmlAttributes: new { @class = "form-control", ReadOnly = "ReadOnly", placeholder = "Collection ID" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        @Html.Label("Collection Name")
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            @Html.TextBoxFor(a => a.CollectionName, htmlAttributes: new { @class = "form-control", placeholder = "Collection Name", required = "" })
+                        </div>
+                    </div>
+                </div>
+                
+
+                <input type="submit" value="Update" class="btn btn-default" id="btnUpdate" formaction="@Url.Action("Update","PermissionCollection")" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

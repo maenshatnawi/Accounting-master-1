@@ -1,0 +1,41 @@
+﻿@model IEnumerable<POCO.AccountsWithCentersCostsTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+    
+        <th>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CentersCostsName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+     
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CentersCostsName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { ParID = item.ID, ParAccountNo = item.AccountNo, ParCentersCostsNo = item.CentersCostsNo }) |
+            @Html.ActionLink("Details", "Details", new { ParAccountNo = item.AccountNo, ParCentersCostsNo = item.CentersCostsNo }) |
+            @Html.ActionLink("Delete", "Delete", new { ParAccountNo = item.AccountNo, ParCentersCostsNo = item.CentersCostsNo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<POCO.MessageUsers>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox ">
+            <div class="ibox-title">
+
+                <h5>List of Messages</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-paper-plane"></i>
+                        @Html.ActionLink("Send a Message ", "Create")
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="ibox-content">
+              
+                <br>
+                <table class="footable table table-stripped toggle-arrow-tiny">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MessageBody)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FromUser)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MessageIcon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FromDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ToDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FirstName)  
+                            </th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MessageBody)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FromUser)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MessageIcon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FromDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ToDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                                </td>
+                              
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.MessageId }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.MessageId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    @*<tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <ul class="pagination float-right"></ul>
+                            </td>
+                        </tr>
+                    </tfoot>*@
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

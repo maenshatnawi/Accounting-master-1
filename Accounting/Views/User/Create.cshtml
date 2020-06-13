@@ -1,0 +1,83 @@
+﻿@model POCO.User
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC6_Seed_Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+    <script>
+
+    </script>
+
+
+</head>
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">ACS System</h1>
+
+            </div>
+            <p>Create User</p>
+            <form class="m-t" role="form" action="Create" method="post">
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.FirstName, htmlAttributes:new{@class= "form-control", placeholder= "First Name", required = "" })
+                    @*<input type="text" class="form-control" placeholder="First Name" required="" name="FirstName">*@
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.MidName, htmlAttributes: new { @class = "form-control", placeholder = "Mid Name", required = "" })
+                    @*<input type="text" class="form-control" placeholder="Mid Name" required="" name="MidName">*@
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.LastName, htmlAttributes: new { @class = "form-control", placeholder = "Last Name", required = "" })
+                    @*<input type="text" class="form-control" placeholder="Last Name" required="" name="LastName">*@
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.Username, htmlAttributes: new { @class = "form-control", placeholder = "User Name", required = "" })
+                    @*<input type="text" class="form-control" placeholder="User Name" required="" name="Username">*@
+                </div>
+                <div class="form-group">
+                    @Html.PasswordFor(a => a.Password, htmlAttributes: new { @class = "form-control", placeholder = "Password", required = "" })
+                    @*<input type="password" class="form-control" placeholder="Password" required="" name="Password">*@
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.Email, htmlAttributes: new { @class = "form-control", placeholder = "Email", required = "" })
+                    @*<input type="text" class="form-control" placeholder="Email" required="" name="Email">*@
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.Address, htmlAttributes: new { @class = "form-control", placeholder = "Address", required = "" })
+                    @*<input type="text" class="form-control" placeholder="Address" required="" name="Address">*@
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.PhoneNo, htmlAttributes: new { @class = "form-control", placeholder = "PhoneNo", required = "" })
+                    @*<input type="text" class="form-control" placeholder="PhoneNo" required="" name="PhoneNo">*@
+                </div>
+
+                <input type="submit" value="Create" class="btn btn-default" id="btnCreate"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

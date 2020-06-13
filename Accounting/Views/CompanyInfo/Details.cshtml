@@ -1,0 +1,73 @@
+﻿@model POCO.CompanyInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br>
+<div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8 animated">
+        <div class="mail-box-header">
+            <div class="float-right tooltip-demo">
+                <img class="img-responsive" width="80" height="80" src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Img)" />
+            </div>
+            <h2>
+                @Html.DisplayNameFor(model => model.CompanyNameEn)
+            </h2>
+            <div class="mail-tools tooltip-demo m-t-md">
+
+                <h3>
+                    @Html.DisplayFor(model => model.CompanyNameAr)
+                </h3>
+                <h5>
+                    <span class="float-right font-normal">
+                    </span>
+                    @Html.DisplayNameFor(model => model.CompanyID): @Html.DisplayFor(model => model.CompanyID)
+                </h5>
+            </div>
+        </div>
+        <div class="mail-box">
+            <div class="mail-body">
+                <p>
+                   <b> Hello Jonathan!</b>
+                    <br />
+                    <br />
+                    @Html.DisplayFor(model => model.FooterLine1)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => model.FooterLine2)
+                </p>
+
+            </div>
+
+            <div class="mail-body tooltip-demo" style="font-weight: 600;">
+                <div >
+                    	    @Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)
+                </div>
+                <div >
+                   	  @Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)
+                </div>
+                <div >
+                 @Html.DisplayNameFor(model => model.Fax): @Html.DisplayFor(model => model.Fax)
+                </div>
+
+            </div>
+            <div class="mail-attachment">
+                <p>
+                    <a href="#">@Html.ActionLink("Edit", "Edit", new { id = Model.ID })</a>
+                    |
+                    <a href="#">@Html.ActionLink("Back to List", "Index")</a>
+                </p>
+
+            </div>
+            <div class="clearfix"></div>
+
+
+        </div>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<POCO.PermissionCollection>
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h2>Permission Collection List</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CollectionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CollectionName)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CollectionID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CollectionID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</body>
+</html>

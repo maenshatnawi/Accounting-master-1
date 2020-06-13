@@ -1,0 +1,98 @@
+﻿@model POCO.AccountTable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccountTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcceptTrans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcceptTrans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Debit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Debit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfitandLoss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfitandLoss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StandardValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StandardValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcceptCostCenter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcceptCostCenter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model POCO.CentersCostsTable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CentersCostsTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CentersCostsNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CentersCostsNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CentersCostsName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CentersCostsName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
