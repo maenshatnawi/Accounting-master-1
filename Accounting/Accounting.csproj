@@ -131,6 +131,7 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\PermissionCollectionController.cs" />
     <Compile Include="Controllers\PermissionDetailsController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1623,6 +1624,9 @@
     <Content Include="Views\Dashboard\Dailymessages.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Dashboard\Tasks.cshtml" />
+    <Content Include="Views\Task\Create.cshtml" />
+    <Content Include="Views\Task\Edit.cshtml" />
+    <Content Include="Views\Task\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBL\DBL.csproj">
