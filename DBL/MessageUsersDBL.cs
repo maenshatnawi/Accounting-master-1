@@ -26,14 +26,14 @@ namespace DBL
                         oMessageUsers = new POCO.MessageUsers();
                         oMessageUsers.ToUserId = (int)ds.Tables[0].Rows[0]["ToUserId"];
                         oMessageUsers.FromUserId = (int)ds.Tables[0].Rows[0]["FromUserId"];
-                        oMessageUsers.MessageId = (int)ds.Tables[0].Rows[0]["MessageId"];
-                        oMessageUsers.MessageBody = ds.Tables[0].Rows[0]["MessageBody"].ToString();
-                        oMessageUsers.FromUser = ds.Tables[0].Rows[0]["FromUser"].ToString();
-                        oMessageUsers.MessageIcon = ds.Tables[0].Rows[0]["MessageIcon"].ToString();
-                        oMessageUsers.FromDate = (DateTime)ds.Tables[0].Rows[0]["FromDate"];
-                        oMessageUsers.ToDate = (DateTime)ds.Tables[0].Rows[0]["ToDate"];
-                        oMessageUsers.FirstName = ds.Tables[0].Rows[0]["FirstName"].ToString();
-                        oMessageUsers.LastName = ds.Tables[0].Rows[0]["LastName"].ToString();
+                        //oMessageUsers.MessageId = (int)ds.Tables[0].Rows[0]["MessageId"];
+                        //oMessageUsers.MessageBody = ds.Tables[0].Rows[0]["MessageBody"].ToString();
+                        //oMessageUsers.FromUser = ds.Tables[0].Rows[0]["FromUser"].ToString();
+                        //oMessageUsers.MessageIcon = ds.Tables[0].Rows[0]["MessageIcon"].ToString();
+                        //oMessageUsers.FromDate = (DateTime)ds.Tables[0].Rows[0]["FromDate"];
+                        //oMessageUsers.ToDate = (DateTime)ds.Tables[0].Rows[0]["ToDate"];
+                        //oMessageUsers.FirstName = ds.Tables[0].Rows[0]["FirstName"].ToString();
+                        //oMessageUsers.LastName = ds.Tables[0].Rows[0]["LastName"].ToString();
 
                         ol.Add(oMessageUsers);
                     }
@@ -47,7 +47,7 @@ namespace DBL
         {
             ds = new DataSet();
             oMessageUsers = new POCO.MessageUsers();
-            ds = oMessageUsersDAL.D_MessageUsers_Insert(PoMessageUsers.MessageId, PoMessageUsers.FromUserId,PoMessageUsers.ToUserId);
+            ds = oMessageUsersDAL.D_MessageUsers_Insert(PoMessageUsers.MessageId, PoMessageUsers.FromUserId, PoMessageUsers.ToUserId);
             if (ds.Tables.Count > 0)
             {
                 if (ds.Tables[0].Rows.Count > 0)
@@ -55,7 +55,6 @@ namespace DBL
                     oMessageUsers.ToUserId = (int)ds.Tables[0].Rows[0]["ToUserId"];
                     oMessageUsers.FromUserId = (int)ds.Tables[0].Rows[0]["FromUserId"];
                     oMessageUsers.MessageId = (int)ds.Tables[0].Rows[0]["MessageId"];
-
                 }
             }
 
@@ -63,33 +62,7 @@ namespace DBL
         }
 
 
-        public POCO.MessageUsers D_MessageUsers_GetToUpdate(int id)
-        {
-            ds = new DataSet();
-            oMessageUsers = new POCO.MessageUsers();
-            List<POCO.MessageUsers> ol = new List<POCO.MessageUsers>();
-            ds = oMessageUsersDAL.D_MessageUsers_GetToUpdate(id);
-            if (ds.Tables.Count > 0)
-            {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    oMessageUsers.FromUserId = (int)ds.Tables[0].Rows[0]["FromUserId"];
-                    oMessageUsers.ToUserId = (int)ds.Tables[0].Rows[0]["ToUserId"];
-                    oMessageUsers.MessageBody = ds.Tables[0].Rows[0]["MessageBody"].ToString();
-                    oMessageUsers.FromUser = ds.Tables[0].Rows[0]["FromUser"].ToString();
-                    oMessageUsers.MessageIcon = ds.Tables[0].Rows[0]["MessageIcon"].ToString();
-                    oMessageUsers.FromDate = (DateTime)ds.Tables[0].Rows[0]["FromDate"];
-                    oMessageUsers.ToDate = (DateTime)ds.Tables[0].Rows[0]["ToDate"];
-                    oMessageUsers.FirstName = ds.Tables[0].Rows[0]["FirstName"].ToString();
-                    oMessageUsers.LastName = ds.Tables[0].Rows[0]["LastName"].ToString();
-
-                    ol.Add(oMessageUsers);
-                }
-
-            }
-            return oMessageUsers;
-
-        }
+     
 
         public List<POCO.MessageUsers> D_MessagesbyDate(int id)
         {
@@ -105,11 +78,11 @@ namespace DBL
                     {
                         oMessageUsers = new POCO.MessageUsers();
                         oMessageUsers.FromUserId = (int)ds.Tables[0].Rows[0]["FromUserId"];
-                        oMessageUsers.MessageBody = ds.Tables[0].Rows[0]["MessageBody"].ToString();
-                        oMessageUsers.FromDate = (DateTime)ds.Tables[0].Rows[0]["FromDate"];
-                        oMessageUsers.ToDate = (DateTime)ds.Tables[0].Rows[0]["ToDate"];
-                        oMessageUsers.FirstName = ds.Tables[0].Rows[0]["FirstName"].ToString();
-                        oMessageUsers.LastName = ds.Tables[0].Rows[0]["LastName"].ToString();
+                        //oMessageUsers.MessageBody = ds.Tables[0].Rows[0]["MessageBody"].ToString();
+                        //oMessageUsers.FromDate = (DateTime)ds.Tables[0].Rows[0]["FromDate"];
+                        //oMessageUsers.ToDate = (DateTime)ds.Tables[0].Rows[0]["ToDate"];
+                        //oMessageUsers.FirstName = ds.Tables[0].Rows[0]["FirstName"].ToString();
+                        //oMessageUsers.LastName = ds.Tables[0].Rows[0]["LastName"].ToString();
 
                         oLMessageUsers.Add(oMessageUsers);
                     }

@@ -1,0 +1,46 @@
+﻿body {
+}
+/***********Icon Picker****************/
+.bg-gray {
+    color: #777;
+    background-color: #eee;
+}
+
+#btnGithub, #btnDonate {
+    width: 200px;
+}
+
+    #btnGithub span, #btnDonate span {
+        font-style: italic;
+    }
+
+#btnStars, #btnForks, #btnReleases, #btnContributors {
+    font-weight: bold;
+}
+
+.tab-content {
+    padding: 12px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#console {
+    height: 135px;
+    overflow-y: scroll;
+    color: white;
+    background-color: black;
+}
+
+
+.btn .caret {
+    display: none;
+}
+/***********jstree****************/
+.jstree-open > .jstree-anchor > .fa-folder:before {
+    content: "\f07c";
+}
+
+.jstree-default .jstree-icon.none {
+    width: 0;
+}

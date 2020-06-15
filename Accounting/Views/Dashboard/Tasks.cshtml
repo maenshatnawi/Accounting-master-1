@@ -1,0 +1,52 @@
+﻿@model List<POCO.Task>
+
+
+<div class="col-lg-6">
+    <div class="ibox ">
+
+        <div class="ibox-title">
+            <h5>Tasks</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+       
+        <div class="ibox-content table-responsive">
+            <table class="table table-hover no-margins">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ToDate)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><small>@Html.DisplayFor(modelItem => item.Status)</small></td>
+                            <td><i class="fa fa-clock-o"></i>  @Html.DisplayFor(modelItem => item.ToDate)</td>
+                            <td> @Html.DisplayFor(modelItem => item.FirstName)</td>
+                            <td class="text-navy">@Html.DisplayFor(modelItem => item.Title) </td>
+                        </tr>
+                    }
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>

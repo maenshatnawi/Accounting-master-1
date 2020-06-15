@@ -50,6 +50,8 @@
     <Compile Include="Permission.cs" />
     <Compile Include="PermissionCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="Task.cs" />
     <Compile Include="User.cs" />
     <Compile Include="vmDashboard.cs" />
   </ItemGroup>

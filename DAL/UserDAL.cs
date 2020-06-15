@@ -96,14 +96,6 @@ namespace DAL
 
             ExDatataBase_nonQuery(cmd);
         }
-        public DataSet D_UsersList_Get(int id)
-        {
-            cmd = new SqlCommand();
-            cmd.CommandText = "D_UsersList_Get";
-            cmd.Parameters.AddWithValue("@id", id);
-
-            return ExDatataBase_returnDataSet(cmd);
-
-        }
+      
     }
 }

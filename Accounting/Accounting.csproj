@@ -139,7 +139,7 @@
     <Compile Include="ViewModel\ImageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AccountingStyleSheet.css" />
+    <Content Include="Content\appStyleSheet.css" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
@@ -275,6 +275,22 @@
     <Content Include="Content\font-awesome\webfonts\fa-solid-900.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\form.js" />
+    <Content Include="Content\IconPicker\css\docs.css" />
+    <Content Include="Content\IconPicker\css\pygments-manni.css" />
+    <Content Include="Content\IconPicker\dist\css\bootstrap-iconpicker.css" />
+    <Content Include="Content\IconPicker\dist\css\bootstrap-iconpicker.min.css" />
+    <Content Include="Content\IconPicker\dist\js\bootstrap-iconpicker-iconset-all.js" />
+    <Content Include="Content\IconPicker\dist\js\bootstrap-iconpicker-iconset-all.min.js" />
+    <Content Include="Content\IconPicker\dist\js\bootstrap-iconpicker.bundle.min.js" />
+    <Content Include="Content\IconPicker\dist\js\bootstrap-iconpicker.js" />
+    <Content Include="Content\IconPicker\dist\js\bootstrap-iconpicker.min.js" />
+    <Content Include="Content\IconPicker\icon-fonts\elusive-icons-2.0.0\css\elusive-icons.css" />
+    <Content Include="Content\IconPicker\icon-fonts\elusive-icons-2.0.0\css\elusive-icons.min.css" />
+    <Content Include="Content\IconPicker\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.svg" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\css\map-icons.css" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\css\map-icons.min.css" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\fonts\map-icons.dev.svg" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\fonts\map-icons.svg" />
     <Content Include="Content\img\a1.jpg" />
     <Content Include="Content\img\a2.jpg" />
     <Content Include="Content\img\a3.jpg" />
@@ -1569,6 +1585,12 @@
     <Folder Include="Views\PermissionDetails\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\IconPicker\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.eot" />
+    <Content Include="Content\IconPicker\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.ttf" />
+    <Content Include="Content\IconPicker\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.woff" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\fonts\map-icons.eot" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\fonts\map-icons.ttf" />
+    <Content Include="Content\IconPicker\icon-fonts\map-icons-2.1.0\fonts\map-icons.woff" />
     <None Include="packages.config" />
     <Content Include="Views\Message\Create.cshtml" />
     <Content Include="Views\AccountsWithCentersCostsTable\Create.cshtml" />
@@ -1591,7 +1613,6 @@
     <Content Include="Views\PermissionCollection\Update.cshtml" />
     <Content Include="Views\User\ChangePassword.cshtml" />
     <Content Include="Views\User\Update.cshtml" />
-    <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\CompanyInfo\Index.cshtml" />
     <Content Include="Views\CompanyInfo\Create.cshtml" />
     <Content Include="Views\CompanyInfo\Details.cshtml" />
@@ -1600,6 +1621,8 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Dashboard\Dailymessages.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Dashboard\Tasks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBL\DBL.csproj">

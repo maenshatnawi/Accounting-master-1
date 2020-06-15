@@ -1,7 +1,7 @@
-﻿@model IEnumerable<POCO.MessageUsers>
+﻿@model List<POCO.Messages>
 
 
-    <div class="col-lg-4">
+    <div class="col-lg-6">
         <div class="ibox ">
             <div class="ibox-title">
                 <h5>Messages</h5>
@@ -23,12 +23,12 @@
                     @foreach (var item in Model)
                     {
                         <div class="feed-element">
-                            <div>
+                            @*<div>
                                 <strong> @Html.DisplayFor(modelItem => item.FirstName)  @Html.DisplayFor(modelItem => item.LastName)</strong>
                                 <div>
                                     @Html.DisplayFor(modelItem => item.MessageBody)
                                 </div>
-                            </div>
+                            </div>*@
                         </div>
 
                     }

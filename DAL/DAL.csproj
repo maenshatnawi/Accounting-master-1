@@ -52,7 +52,14 @@
     <Compile Include="PermissionCollectionDAL.cs" />
     <Compile Include="PermissionDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TasksDAL.cs" />
     <Compile Include="UserDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POCO\POCO.csproj">
+      <Project>{865D1857-AAD0-4B04-9642-DF5783A745F9}</Project>
+      <Name>POCO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

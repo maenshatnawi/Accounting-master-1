@@ -126,30 +126,5 @@ namespace DBL
             oUserDAL.D_Users_Change_Password(PoUser.UserID, PoUser.Password);
         }
 
-        //Get Users List except Logged User
-        public List<POCO.User> D_UsersList_Get(int id)
-        {
-            ds = new DataSet();
-            List<POCO.User> oLUser = new List<POCO.User>();
-
-            ds = oUserDAL.D_UsersList_Get(id);
-            if (ds.Tables.Count > 0)
-            {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-                    {
-                        oUser = new POCO.User();
-                        oUser.UserID = Convert.ToInt32(ds.Tables[0].Rows[i]["Id"]);
-                        oUser.FirstName = ds.Tables[0].Rows[i]["FirstName"].ToString();
-                        oUser.LastName = ds.Tables[0].Rows[i]["LastName"].ToString();
-
-                        oLUser.Add(oUser);
-                    }
-                }
-            }
-            return oLUser;
-        }
-
     }
 }

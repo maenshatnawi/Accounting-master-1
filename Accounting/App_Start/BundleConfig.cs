@@ -7,8 +7,10 @@ namespace Accounting
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-
-           // Font Awesome icons
+            // Application Styles
+            bundles.Add(new StyleBundle("~/Content/AppStyleSHeet").Include(
+                      "~/Content/appStyleSheet.css"));
+            // Font Awesome icons
             bundles.Add(new StyleBundle("~/font-awesome/css").Include(
                       "~/Content/font-awesome/css/font-awesome.css", new CssRewriteUrlTransform()));
 

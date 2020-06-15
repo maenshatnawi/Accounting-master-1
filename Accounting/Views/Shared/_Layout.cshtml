@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
 
     @Styles.Render("~/Content/icheck")
-    @Styles.Render("~/font-awesome/css")
     @Styles.Render("~/Content/icheck")
     @Styles.Render("~/Content/bootstrap-touchspin")
     @Styles.Render("~/Content/colorpicker")
@@ -30,6 +29,11 @@
     @Styles.Render("~/Content/awesome-checkbox")
     @Styles.Render("~/Content/style")
     @Styles.Render("~/Content/bootstrap-markdown")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+    <link rel="stylesheet" href="~/Content/IconPicker/dist/css/bootstrap-iconpicker.css" />
+    @Styles.Render("~/font-awesome/css")
+    @Styles.Render("~/Content/AppStyleSHeet")
+
 
 </head>
 <body>
@@ -973,16 +977,9 @@
 
     <!--markdown-->
     @Scripts.Render("~/plugins/bootstrap-markdown")
+    <!--Icon Picker-->
 
-    <style>
-        .jstree-open > .jstree-anchor > .fa-folder:before {
-            content: "\f07c";
-        }
-
-        .jstree-default .jstree-icon.none {
-            width: 0;
-        }
-    </style>
+    <script type="text/javascript" src="~/Content/IconPicker/dist/js/bootstrap-iconpicker.bundle.min.js"></script>
     <script src="~/Content/index.js"></script>
     <script src="~/Content/form.js"></script>
     <script src="~/Content/jstree.js"></script>

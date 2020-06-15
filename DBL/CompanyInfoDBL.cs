@@ -11,11 +11,13 @@ namespace DBL
         private CompanyInfoDAL ocompanyInfoDAL=new CompanyInfoDAL();
         private DataSet ds;
         private POCO.CompanyInfo oCompany;
-
+        public CompanyInfoDBL()
+        {
+            ds = new DataSet();
+        }
         public List<POCO.CompanyInfo> D_CompanyInfo_Get()
         {
-            DataSet ds = new DataSet();
-           
+        
             List<POCO.CompanyInfo> ocompanyList = new List<POCO.CompanyInfo>();
             ds = ocompanyInfoDAL.D_CompanyInfo_Get();
             foreach (DataTable table in ds.Tables)
@@ -43,7 +45,6 @@ namespace DBL
 
         public POCO.CompanyInfo D_CompanyInfo_Insert(POCO.CompanyInfo PoCompany)
         {
-            DataSet ds = new DataSet();
             oCompany = new POCO.CompanyInfo();
 
             ds = ocompanyInfoDAL.D_CompanyInfo_Insert(PoCompany.CompanyID, PoCompany.CompanyNameAr, PoCompany.Phone, PoCompany.CompanyNameEn, PoCompany.Address, PoCompany.Fax, PoCompany.FooterLine1, PoCompany.FooterLine2,PoCompany.Img);
@@ -75,7 +76,6 @@ namespace DBL
         //Edit (Get)
         public POCO.CompanyInfo D_CompanyInfoGetToUpdate(decimal ID)
         {
-            ds = new DataSet();
             oCompany = new POCO.CompanyInfo();
             ds = ocompanyInfoDAL.D_CompanyInfoGetToUpdate(ID);
 

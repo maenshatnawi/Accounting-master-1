@@ -50,6 +50,7 @@
     <Compile Include="PermissionCollectionDBL.cs" />
     <Compile Include="PermissionDBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TasksDBL.cs" />
     <Compile Include="UserDBL.cs" />
   </ItemGroup>
   <ItemGroup>
